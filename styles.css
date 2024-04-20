@@ -1,0 +1,380 @@
+/*  Privacy Policy Generator By SATYAM! | JS Project | Free to use By Giving Credits! */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+#privacyForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* 
+.ppContainer::after {
+    border: 0.5px solid #000;
+    padding: 5px;
+    text-align: justify;
+    height: 500px;
+    overflow-y: scroll;
+} */
+/* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+.hidden-btn {
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+
+.errorBox {
+    background-color: #e01409;
+    width: 200px;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    margin: 10px;
+    border-radius: 5px;
+    z-index: 5;
+    animation-name: slideRight;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideRight {
+    0% {
+        background-color: #e01409;
+        right: 50px;
+    }
+
+    100% {
+        background-color: #e01409;
+        right: 0px;
+    }
+}
+
+.errorTxt {
+    color: #fff;
+}
+
+.crossBtn {
+    color: #fff;
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.ppContainer {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+/*  */
+/* The container */
+.label-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+/* Hide the browser's default checkbox */
+.label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .label-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .label-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .label-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .label-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+/* ---------------------------------------------------------------- OMRS CUSTOM CSS --------------------------------------------------------------------------- */
+/* OMRS Custom Css */
+:root {
+	--omrs-color-ink-lowest-contrast: rgba(47, 60, 85, 0.18);
+	--omrs-color-ink-low-contrast: rgba(60, 60, 67, 0.3);
+	--omrs-color-ink-medium-contrast: rgba(19, 19, 21, 0.6);
+	--omrs-color-interaction: #1e4bd1;
+	--omrs-color-interaction-minus-two: rgba(73, 133, 224, 0.12);
+	--omrs-color-danger: #b50706;
+	--omrs-color-bg-low-contrast: #eff1f2;
+	--omrs-color-ink-high-contrast: #121212;
+	--omrs-color-bg-high-contrast: #ffffff;
+	
+}
+/** END: Non Openmrs CSS **/
+div.omrs-input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    width: 20.4375rem;
+  }
+  
+  /* Input*/
+  .omrs-input-underlined > input,
+  .omrs-input-filled > input {
+      border: none;
+      border-bottom: 0.125rem solid var(--omrs-color-ink-medium-contrast);
+      width: 90%;
+      height: 2rem;
+      font-size: 1.0625rem;
+      padding-left: 0.875rem;
+      line-height: 147.6%;
+      padding-top: 0.825rem;
+      padding-bottom: 0.5rem;
+  }
+  
+  .omrs-input-underlined > input:focus,
+  .omrs-input-filled > input:focus {
+      outline: none;
+  }
+  
+  .omrs-input-underlined > .omrs-input-label,
+  .omrs-input-filled > .omrs-input-label {
+      position: absolute;
+      top: 0.9375rem;
+      left: 0.875rem;
+      line-height: 147.6%;
+      color: var(--omrs-color-ink-medium-contrast);
+      transition: top .2s;
+  }
+  
+  .omrs-input-underlined > svg,
+  .omrs-input-filled > svg {
+      position: absolute;
+      top: 0.9375rem;
+      right: 0.875rem;
+      fill: var(--omrs-color-ink-medium-contrast);
+  }
+  
+  .omrs-input-underlined > .omrs-input-helper,
+  .omrs-input-filled > .omrs-input-helper {
+      font-size: 0.9375rem;
+      color: var(--omrs-color-ink-medium-contrast);
+      letter-spacing: 0.0275rem;
+      margin: 0.125rem 0.875rem;
+  }
+  
+  .omrs-input-underlined > input:hover,
+  .omrs-input-filled > input:hover {
+      background: var(--omrs-color-interaction-minus-two);
+      border-color: var(--omrs-color-ink-high-contrast);
+  }
+  
+  .omrs-input-underlined > input:focus + .omrs-input-label,
+  .omrs-input-underlined > input:valid + .omrs-input-label,
+  .omrs-input-filled > input:focus + .omrs-input-label,
+  .omrs-input-filled > input:valid + .omrs-input-label {
+      top: -5px;
+      font-size: 0.9375rem;
+      margin-bottom: 32px;;
+  }
+
+  .omrs-input-underlined:not(.omrs-input-danger) > input:focus + .omrs-input-label,
+  .omrs-input-filled:not(.omrs-input-danger) > input:focus + .omrs-input-label {
+      color: var(--omrs-color-interaction);
+  }
+  
+  .omrs-input-underlined:not(.omrs-input-danger) > input:focus,
+  .omrs-input-filled:not(.omrs-input-danger) > input:focus {
+      border-color: var(--omrs-color-interaction);
+  }
+  
+  .omrs-input-underlined:not(.omrs-input-danger) > input:focus ~ svg,
+  .omrs-input-filled:not(.omrs-input-danger) > input:focus ~ svg {
+      fill: var(--omrs-color-ink-high-contrast);
+  }
+  
+  /** DISABLED **/
+  
+  .omrs-input-underlined > input:disabled {
+      background: var(--omrs-color-bg-low-contrast);
+      cursor: not-allowed;
+  }
+  
+  .omrs-input-underlined > input:disabled + .omrs-input-label,
+  .omrs-input-underlined > input:disabled ~ .omrs-input-helper{
+      color: var(--omrs-color-ink-low-contrast);
+  }
+  
+  .omrs-input-underlined > input:disabled ~ svg {
+      fill: var(--omrs-color-ink-low-contrast);
+  }
+  
+  
+  /** DANGER **/
+  
+  .omrs-input-underlined.omrs-input-danger > .omrs-input-label, .omrs-input-underlined.omrs-input-danger > .omrs-input-helper,
+  .omrs-input-filled.omrs-input-danger > .omrs-input-label, .omrs-input-filled.omrs-input-danger > .omrs-input-helper{
+      color: var(--omrs-color-danger);
+  }
+  
+  .omrs-input-danger > svg {
+      fill: var(--omrs-color-danger);
+  }
+  
+  .omrs-input-danger > input {
+      border-color: var(--omrs-color-danger);
+  }
+  
+  .omrs-input-underlined > input {
+      background: var(--omrs-color-bg-high-contrast);
+  }
+  .omrs-input-filled > input {
+      background: var(--omrs-color-bg-low-contrast);
+  }
+  /* -------------------------------------- PP Output ------------------------------------------------------------ */
+.ppOutput{
+    border: 1px solid #3c3b3bde;
+    border-radius: 5px;
+}
+.copy-div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.8rem;
+    background-color: #767676c6;
+    color: #fff;
+}
+.textEditor{
+    padding: 10px;
+    text-align: justify;
+}
+
+/*  Privacy Policy Generator By SATYAM! | JS Project | Free to use By Giving Credits! */
